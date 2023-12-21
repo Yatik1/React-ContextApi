@@ -2,13 +2,15 @@ import React from 'react'
 import "./App.css"
 import Login from './components/Login'
 import Profile from './components/Profile'
+import UserContextProvider from './context/UserContextProvider'
+
 function App() {
   return (
-    <div>
+    <UserContextProvider>
        <h1>React Context Api Basics For State Management 🚉</h1>
        <Login />
        <Profile />
-    </div>
+    </UserContextProvider>
   )
 }
 
