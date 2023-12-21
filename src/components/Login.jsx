@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import UserContext from '../context/UserContext'
 
 function Login() {
 
   const [username,setUsername] = useState('')
   const [password,setPassword] = useState('')
 
-   function handleClick(){
+  const {setUser} = useContext(UserContext)
+
+   function handleClick(e){
      e.preventDefault()
+     setUser({username,password})
    } 
 
   return (
